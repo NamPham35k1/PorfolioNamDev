@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: porfolionam-dev
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview -- --host
+    envVars:
+      - key: NODE_ENV
+        value: production
+    publicDir: dist

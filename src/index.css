@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark light;
+  }
+
+  body {
+    @apply bg-white text-slate-800 dark:bg-[#0B0F17] dark:text-slate-100 font-sans antialiased transition-colors duration-300 min-h-screen overflow-x-hidden;
+  }
+
+  /* Selection style */
+  ::selection {
+    @apply bg-emerald-500/30 text-emerald-300;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism effects */
+  .glass-card {
+    @apply bg-white/70 dark:bg-[#131924]/80 backdrop-blur-xl border border-slate-200/80 dark:border-[#212B3B] shadow-lg shadow-black/5 dark:shadow-black/20;
+  }
+
+  .glass-card-hover {
+    @apply transition-all duration-300 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1;
+  }
+
+  .glass-nav {
+    @apply bg-white/80 dark:bg-[#0B0F17]/85 backdrop-blur-md border-b border-slate-200/60 dark:border-[#1E2638];
+  }
+
+  /* Neon Gradient Texts */
+  .gradient-text-emerald {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400;
+  }
+
+  .gradient-text-indigo {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400;
+  }
+
+  .gradient-bg-emerald {
+    @apply bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white shadow-lg shadow-emerald-500/25;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F293D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10B981;
+}

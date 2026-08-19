@@ -56,27 +56,27 @@ export const getAIResponse = async (userQuery: string): Promise<AIResponse> => {
   // Experience & Bio
   if (query.includes('experience') || query.includes('who') || query.includes('about') || query.includes('nam')) {
     return {
-      answer: `Hi! Nam is an **Android & Full-stack Web Developer** with 2+ years of hands-on experience building real-world native mobile applications and web products. He started in 2024 with Kotlin & Android SDK, expanded in 2025 into media streaming & overlay services, and grew in 2026 into React, TypeScript, and Node.js full-stack development.`,
-      suggestions: ['What tech stack does Nam use?', 'Show projects', 'Ask for a quote']
+      answer: `Hi! Thành Nam là **Android & Full-stack Web Developer** có kinh nghiệm phát triển và maintain các ứng dụng Android thực tế, đặc biệt là các dự án theo mô hình monetization như Google AdMob, quảng cáo trong ứng dụng và tích hợp In-App Purchases (IAP). Thành Nam cũng làm việc sâu với REST APIs, Firebase, Room local database và thiết kế giao diện Android mượt mà.`,
+      suggestions: ['What tech stack does Thành Nam use?', 'Show projects', 'Ask for a quote']
     };
   }
 
   // Contact
   if (query.includes('contact') || query.includes('email') || query.includes('reach') || query.includes('hire')) {
     return {
-      answer: `You can reach out to Nam directly through the **Contact page** on this website or email directly at **${developerConfig.email}**. Nam is currently **${developerConfig.status}**!`,
-      suggestions: ['Go to Contact Page', 'What services does Nam offer?', 'What projects has Nam done?']
+      answer: `You can reach out to Thành Nam directly through the **Contact page** on this website or email directly at **${developerConfig.email}**. Thành Nam is currently **${developerConfig.status}**!`,
+      suggestions: ['Go to Contact Page', 'What services does Thành Nam offer?', 'What projects has Thành Nam done?']
     };
   }
 
   // Generic context response
   return {
-    answer: `Nam is an Android & Full-stack Web Developer specializing in Kotlin native mobile apps, React web applications, and Node.js/Express REST backends. Feel free to ask about his projects (IPTV Player, Kawaii ScreenPet, Spa Booking), technical skills, or freelance service packages!`,
+    answer: `Thành Nam là Android & Full-stack Web Developer chuyên về Kotlin native mobile apps, tối ưu hóa AdMob Monetization & IAP, Firebase, React web apps và Node.js REST APIs.`,
     suggestions: [
-      'What can Nam build for me?',
-      'Tell me about IPTV Player project',
-      'What is Nam\'s tech stack?',
-      'Is Nam available for freelance?'
+      'What can Thành Nam build for me?',
+      'Tell me about Android & AdMob experience',
+      'What is Thành Nam\'s tech stack?',
+      'Is Thành Nam available for freelance?'
     ]
   };
 };

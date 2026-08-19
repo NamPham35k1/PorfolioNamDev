@@ -56,6 +56,24 @@ export const skillsData: Skill[] = [
     description: 'Type-safe HTTP client, interceptors, authentication headers & JSON serializing.',
     tags: ['Networking', 'APIs']
   },
+  {
+    name: 'Google AdMob & Ads',
+    iconName: 'Sparkles',
+    category: 'Mobile',
+    level: 92,
+    experience: '2+ Years',
+    description: 'App Monetization, Banner, Interstitial, Native & App Open Ads integration & Mediation.',
+    tags: ['Monetization', 'AdMob', 'Ads']
+  },
+  {
+    name: 'In-App Purchases (IAP)',
+    iconName: 'DollarSign',
+    category: 'Mobile',
+    level: 88,
+    experience: '1.5+ Years',
+    description: 'Google Play Billing API, subscriptions, one-time purchases & receipt verification.',
+    tags: ['Monetization', 'IAP', 'Billing']
+  },
 
   // Web
   {

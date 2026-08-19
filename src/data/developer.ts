@@ -1,21 +1,21 @@
 import type { QuickStat, TimelineEvent } from '../types';
 
 export const developerConfig = {
-  name: 'Nam',
+  name: 'Thành Nam',
   title: 'Android & Web Developer',
-  tagline: 'Building modern Android applications, React web apps, and scalable backend systems.',
+  tagline: 'Phát triển & maintain ứng dụng Android thực tế, tối ưu hóa Monetization (AdMob, IAP), Firebase & Full-stack Web.',
   status: 'Available for freelance',
-  location: 'Vietnam',
-  email: 'nam.dev.contact@gmail.com',
+  location: 'Việt Nam',
+  email: 'thanhnamnb1004@gmail.com',
   githubUrl: 'https://github.com',
-  linkedinUrl: 'https://linkedin.com',
-  facebookUrl: 'https://facebook.com',
-  bio: `I am a passionate Android & Full-stack Web Developer focused on building high-performance native mobile apps and modern web platforms. With expertise spanning Kotlin, Jetpack libraries, ExoPlayer streaming, ReactJS, TypeScript, and Node.js REST APIs, I craft products with premium UI/UX, robust architecture, and smooth user interactions.`,
+  linkedinUrl: 'https://www.linkedin.com/in/nam-ph%E1%BA%A1m-9961a7295/',
+  facebookUrl: 'https://www.facebook.com/pham.thanh.nam.39218?locale=vi_VN',
+  bio: `Mình có kinh nghiệm phát triển và maintain các ứng dụng Android thực tế, đặc biệt là các dự án theo mô hình monetization như AdMob, quảng cáo trong ứng dụng và các ứng dụng có tích hợp IAP. Mình cũng từng làm việc với các tính năng liên quan đến API, Firebase, local database và xử lý giao diện Android.`,
   coreFocus: [
-    'Native Android Development (Kotlin, MVVM, Room, Retrofit, ExoPlayer)',
+    'Native Android Apps (Kotlin, MVVM, Room DB, Retrofit, Jetpack)',
+    'Mobile Monetization (Google AdMob Ads, Mediation, In-App Purchase / IAP)',
+    'Backend & Cloud Integration (RESTful API, Firebase Auth / Firestore / FCM)',
     'Modern Web Development (ReactJS, TypeScript, Tailwind CSS, Vite)',
-    'Backend Services & APIs (Node.js, Express.js, MongoDB, RESTful APIs)',
-    'Desktop Overlay & System Services (Android Service, WindowManager)',
   ]
 };
 
@@ -23,13 +23,13 @@ export const quickStats: QuickStat[] = [
   {
     label: 'Projects Completed',
     value: '15+',
-    subtitle: 'Android & Web Applications',
+    subtitle: 'Android Apps & Web Applications',
     icon: 'FolderCheck',
   },
   {
     label: 'Technologies',
     value: '10+',
-    subtitle: 'Kotlin, React, Node, MongoDB...',
+    subtitle: 'Kotlin, AdMob, IAP, Firebase, React...',
     icon: 'Cpu',
   },
   {
@@ -49,23 +49,23 @@ export const quickStats: QuickStat[] = [
 export const timelineEvents: TimelineEvent[] = [
   {
     year: '2024',
-    title: 'Started Native Android Development',
-    description: 'Mastered Kotlin, Android SDK fundamentals, MVVM architecture, Room database, Retrofit networking, and UI design principles.',
-    technologies: ['Kotlin', 'Android SDK', 'MVVM', 'Room', 'Retrofit'],
-    highlight: 'Foundation Year',
+    title: 'Phát triển Native Android App & UI/UX',
+    description: 'Nắm vững Kotlin, Android SDK, MVVM Architecture, Room Database, Retrofit API và tối ưu giao diện Android mượt mà.',
+    technologies: ['Kotlin', 'Android SDK', 'MVVM', 'Room DB', 'Retrofit', 'UI Layouts'],
+    highlight: 'Foundation & UI',
   },
   {
     year: '2025',
-    title: 'Built Real-World Production Android Apps',
-    description: 'Developed complex native Android solutions including IPTV Player with ExoPlayer media streaming, M3U playlist parsing, and Kawaii ScreenPet overlay system service.',
-    technologies: ['Kotlin', 'ExoPlayer', 'Android Service', 'Coroutines', 'Firebase'],
-    highlight: 'Key Milestones',
+    title: 'Tích hợp Monetization (AdMob, IAP) & Firebase',
+    description: 'Phát triển và duy trì các dự án ứng dụng Android thực tế theo mô hình thương mại: tích hợp quảng cáo AdMob (Banner, Interstitial, Native, App Open), In-App Purchases (IAP) và các dịch vụ Firebase.',
+    technologies: ['Google AdMob', 'In-App Purchase (IAP)', 'Firebase', 'Local DB', 'REST APIs'],
+    highlight: 'Monetization & Growth',
   },
   {
     year: '2026',
-    title: 'Expanding into React & Full-stack Web Development',
-    description: 'Engineered responsive web applications with ReactJS, TypeScript, Tailwind CSS, REST APIs, Express.js, and MongoDB. Combining mobile and web expertise to deliver cross-platform client solutions.',
-    technologies: ['ReactJS', 'TypeScript', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs'],
+    title: 'Mở rộng sang Full-stack Web & Hệ sinh thái số',
+    description: 'Xây dựng các sản phẩm web hiện đại với ReactJS, TypeScript, Tailwind CSS, Node.js API. Kết hợp thế mạnh Android di động và Web full-stack.',
+    technologies: ['ReactJS', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
     highlight: 'Full-Stack Evolution',
   },
 ];

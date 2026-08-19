@@ -9,7 +9,7 @@ export const blogPostsData: BlogPost[] = [
     date: 'February 12, 2026',
     readTime: '6 min read',
     author: {
-      name: 'Nam',
+      name: 'Thành Nam',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
       role: 'Android & Web Developer',
     },
@@ -76,7 +76,7 @@ class MainViewModel(
     date: 'January 28, 2026',
     readTime: '8 min read',
     author: {
-      name: 'Nam',
+      name: 'Thành Nam',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
       role: 'Android & Web Developer',
     },
@@ -120,8 +120,8 @@ exports.getProjects = async (req, res, next) => {
     date: 'January 15, 2026',
     readTime: '5 min read',
     author: {
-      name: 'Nam',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
+      name: 'Thành Nam',
+      avatar: 'https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/773624360_1068814392313252_7712551865050304274_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG0zFwx4KRl4lRnckftshCqU33CXXPV3UZTfcJdc9XdRmapPMaahtG8JOmvbVoVulG7R368Be7P0qXMHaI3rw4j&_nc_ohc=BOlJ95CwvqQQ7kNvwGhQOzq&_nc_oc=AdoL6Vm87k3prwKjh2PMbM1cUHl1U9CNwg0rRtYr2S2EBVs5RxSgu5zVe3QrhaxFZWs&_nc_zt=23&_nc_ht=scontent.fhan14-2.fna&_nc_gid=xzHZtHSVTlpbr9LrrU2xXg&_nc_ss=7b2a8&oh=00_AQH_r5tIdfKe46CpbMg1WXOWlSxHN_AokKn2MOVtItvnpQ&oe=6A8B06E5',
       role: 'Android & Web Developer',
     },
     coverImage: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1000&auto=format&fit=crop',
@@ -161,7 +161,7 @@ export const useProjects = () => {
     date: 'January 05, 2026',
     readTime: '9 min read',
     author: {
-      name: 'Nam',
+      name: 'Thành Nam',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
       role: 'Android & Web Developer',
     },
@@ -212,7 +212,7 @@ class IPTVPlayerManager(private val context: Context) {
     date: 'December 20, 2025',
     readTime: '4 min read',
     author: {
-      name: 'Nam',
+      name: 'Thành Nam',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
       role: 'Android & Web Developer',
     },

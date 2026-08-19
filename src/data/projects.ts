@@ -2,6 +2,41 @@ import type { Project } from '../types';
 
 export const projectsData: Project[] = [
   {
+    id: 'appfood-ordering',
+    title: 'AppFood — Ứng dụng Đặt đồ ăn & Giao hàng',
+    subtitle: 'Đồ án ứng dụng di động đặt đồ ăn thông minh trên Android (Kotlin / Java & REST API)',
+    description: 'Dự án Đồ án ứng dụng Android Native phục vụ nhu cầu đặt món ăn và giao hàng thực tế. Tích hợp tra cứu món ăn thông minh, tùy chọn toppings, giỏ hàng, đặt hàng trực tuyến, theo dõi trạng thái đơn hàng thời gian thực và quản lý địa chỉ giao hàng.',
+    problem: 'Người dùng cần giải pháp đặt món ăn nhanh chóng, giao diện đơn giản, trực quan, hỗ trợ theo dõi tiến trình đơn hàng và lưu lịch sử giao dịch tiện lợi trên thiết bị di động.',
+    solution: 'Phát triển ứng dụng Android AppFood với kiến trúc MVVM kết hợp Room Database lưu cache giỏ hàng offline, Retrofit API kết nối backend server, Firebase Realtime theo dõi đơn hàng và giao diện mượt mà.',
+    features: [
+      'Giao diện Android Native hiện đại (Kotlin/Java, Material Design UI, ViewBinding/Jetpack Compose)',
+      'Danh mục món ăn phân loại theo cửa hàng, tìm kiếm từ khóa, gợi ý món hot & topping phong phú',
+      'Giỏ hàng thông minh, tự động tính toán tổng tiền, chiết khấu và phí vận chuyển',
+      'Theo dõi tiến trình đơn hàng thời gian thực (Đã đặt, Đang chuẩn bị, Đang giao, Đã hoàn thành)',
+      'Lưu vết địa chỉ nhận hàng, lịch sử đơn hàng và đánh giá chất lượng món ăn',
+      'Tích hợp RESTful API backend Node.js / Express & xác thực tài khoản Firebase Auth'
+    ],
+    techStack: ['Kotlin', 'Android SDK', 'MVVM', 'Room DB', 'Retrofit', 'Firebase', 'REST API', 'Material UI'],
+    category: 'Android',
+    githubUrl: 'https://github.com',
+    demoUrl: 'https://github.com',
+    imageUrl: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000&auto=format&fit=crop',
+    screenshots: [
+      'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop'
+    ],
+    challenges: [
+      'Tối ưu hóa giao diện danh mục món ăn mượt mà 60fps khi render danh sách dài.',
+      'Đồng bộ hóa dữ liệu giỏ hàng local và trạng thái đơn hàng realtime qua API.'
+    ],
+    results: [
+      'Đạt kết quả xuất sắc trong Đồ án chuyên ngành Công nghệ Thông tin tại Trường UTT.',
+      'Hoạt động ổn định với thời gian phản hồi API và lưu giỏ hàng tức thì.'
+    ],
+    featured: true,
+  },
+  {
     id: 'iptv-player',
     title: 'IPTV Player',
     subtitle: 'High-performance Android IPTV media streaming application',

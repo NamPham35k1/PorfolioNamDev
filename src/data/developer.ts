@@ -17,6 +17,7 @@ export const developerConfig = {
   coordinates: { lat: 21.023478897890854, lng: 105.80270560295986 },
   googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=21.023478897890854,105.80270560295986',
   mapEmbedUrl: 'https://maps.google.com/maps?q=21.023478897890854,105.80270560295986&hl=vi&z=16&output=embed',
+  avatarUrl: 'https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/773624360_1068814392313252_7712551865050304274_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG0zFwx4KRl4lRnckftshCqU33CXXPV3UZTfcJdc9XdRmapPMaahtG8JOmvbVoVulG7R368Be7P0qXMHaI3rw4j&_nc_ohc=BOlJ95CwvqQQ7kNvwGhQOzq&_nc_oc=AdoL6Vm87k3prwKjh2PMbM1cUHl1U9CNwg0rRtYr2S2EBVs5RxSgu5zVe3QrhaxFZWs&_nc_zt=23&_nc_ht=scontent.fhan14-2.fna&_nc_gid=xzHZtHSVTlpbr9LrrU2xXg&_nc_ss=7b2a8&oh=00_AQH_r5tIdfKe46CpbMg1WXOWlSxHN_AokKn2MOVtItvnpQ&oe=6A8B06E5',
   email: 'thanhnamnb1004@gmail.com',
   githubUrl: 'https://github.com',
   linkedinUrl: 'https://www.linkedin.com/in/nam-ph%E1%BA%A1m-9961a7295/',

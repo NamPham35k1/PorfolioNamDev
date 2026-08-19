@@ -1,10 +1,9 @@
 services:
-  - type: web
+  - type: static
     name: porfolionam-dev
-    runtime: node
     buildCommand: npm install && npm run build
-    startCommand: npm run preview -- --host
-    envVars:
-      - key: NODE_ENV
-        value: production
-    publicDir: dist
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

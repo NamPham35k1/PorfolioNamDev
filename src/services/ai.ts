@@ -67,6 +67,13 @@ export const getAIResponse = async (userQuery: string): Promise<AIResponse> => {
   }
 
   // Project queries
+  if (query.includes('food') || query.includes('appfood') || query.includes('đồ ăn') || query.includes('đặt món') || query.includes('đồ án')) {
+    return {
+      answer: `🍔 **AppFood — Ứng dụng Đặt đồ ăn & Giao hàng (Đồ án xuất sắc tại UTT):**\n\nDự án ứng dụng Android Native do Phạm Thành Nam phát triển bằng Kotlin, MVVM, Room DB, Retrofit API và Firebase.\n- 🛵 **Tính năng nổi bật:** Tra cứu món ăn thông minh, chọn topping phong phú, giỏ hàng tự động tính toán chiết khấu, theo dõi đơn hàng thời gian thực, quản lý địa chỉ giao hàng và thông báo Push Notification.`,
+      suggestions: ['Xem các dự án Android khác', 'Kỹ năng Android của Nam', 'Cách liên hệ với Nam?']
+    };
+  }
+
   if (query.includes('iptv') || query.includes('stream') || query.includes('video')) {
     return {
       answer: `Thành Nam đã phát triển **IPTV Player**, ứng dụng Android Native được xây dựng bằng Kotlin, MVVM architecture, Room DB, Retrofit và ExoPlayer. Ứng dụng phân tích cú pháp danh sách phát M3U/M3U8 phát trực tuyến HLS độ trễ thấp, danh mục yêu thích và đề xuất kênh.`,

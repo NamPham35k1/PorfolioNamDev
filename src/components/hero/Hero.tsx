@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Sparkles, FolderCode, Mail, Smartphone, Code2 } from 'lucide-react';
 import { TerminalCard } from './TerminalCard';
 import { Badge } from '../common/Badge';
+import { developerConfig } from '../../data/developer';
 
 export const Hero: React.FC = () => {
   const navigate = useNavigate();
@@ -15,15 +16,23 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <div className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <img
+                  src={developerConfig.avatarUrl}
+                  alt={developerConfig.fullName}
+                  className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-emerald-400/80 shadow-2xl"
+                />
+              </div>
               <Badge variant="emerald" size="md">
                 <Sparkles className="w-4 h-4 text-emerald-400" />
-                <span>Available for Freelance Projects</span>
+                <span>{developerConfig.status}</span>
               </Badge>
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-              Hi, I'm <span className="gradient-text-emerald">Nam 👋</span>
+              Hi, I'm <span className="gradient-text-emerald">Thành Nam 👋</span>
               <br />
               <span className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-700 dark:text-slate-300 block mt-2">
                 Android & Web Developer

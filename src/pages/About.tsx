@@ -23,9 +23,21 @@ export const About: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-12">
             <div className="lg:col-span-7 glass-card p-8 sm:p-10 rounded-3xl border border-slate-200/80 dark:border-[#212B3B] space-y-6">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                Hi, I'm Nam 👋
-              </h3>
+              <div className="flex items-center gap-4">
+                <img
+                  src={developerConfig.avatarUrl}
+                  alt={developerConfig.fullName}
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-emerald-400/80 shadow-lg"
+                />
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    Hi, I'm {developerConfig.name} 👋
+                  </h3>
+                  <p className="text-xs font-mono text-emerald-400 mt-1 font-semibold">
+                    {developerConfig.title} • {developerConfig.hometown}
+                  </p>
+                </div>
+              </div>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base">
                 {developerConfig.bio}
               </p>

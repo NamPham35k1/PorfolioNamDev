@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
-import { Mail, Send, CheckCircle2, AlertCircle, Sparkles, Clock, MapPin } from 'lucide-react';
+import { Mail, Send, CheckCircle2, AlertCircle, Sparkles, Clock, MapPin, ExternalLink } from 'lucide-react';
 import { SectionHeader } from '../components/common/SectionHeader';
 import { SEO } from '../components/common/SEO';
 import { submitContactForm, validateContactForm } from '../services/contact';
@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
 
   return (
     <>
-      <SEO title="Contact Nam — Hire Android & Web Developer" description="Get in touch with Nam for native Android apps, React web development, and backend REST API projects." />
+      <SEO title="Contact Thành Nam — Hire Android & Web Developer" description="Get in touch with Thành Nam for native Android apps, AdMob monetization, IAP, React web development, and backend REST API projects." />
 
       <main className="pt-32 pb-20 space-y-12">
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,23 +115,61 @@ export const Contact: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-[#131924] border border-slate-200 dark:border-[#212B3B]">
-                    <div className="p-3 rounded-xl bg-indigo-500/10 text-indigo-400">
+                  <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-[#131924] border border-slate-200 dark:border-[#212B3B]">
+                    <div className="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 shrink-0">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-xs text-slate-500 font-mono">Location</div>
-                      <div className="font-bold text-slate-900 dark:text-white">Vietnam (UTC+7)</div>
+                      <div className="text-xs text-slate-500 font-mono">Address Location</div>
+                      <div className="font-bold text-slate-900 dark:text-white text-xs leading-relaxed mt-0.5">
+                        {developerConfig.address}
+                      </div>
+                      <a
+                        href={developerConfig.googleMapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-emerald-400 hover:underline font-semibold mt-1"
+                      >
+                        <span>Open in Google Maps</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
 
+              {/* Interactive Google Map Embed */}
+              <div className="glass-card p-4 rounded-3xl border border-slate-200/80 dark:border-[#212B3B] space-y-3">
+                <div className="flex items-center justify-between px-2">
+                  <div className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
+                    <MapPin className="w-4 h-4 text-emerald-400" />
+                    <span>Interactive Map</span>
+                  </div>
+                  <span className="text-xs font-mono text-slate-400">21.0235° N, 105.8027° E</span>
+                </div>
+                <div className="w-full h-56 rounded-2xl overflow-hidden border border-slate-200 dark:border-[#212B3B]">
+                  <iframe
+                    title="Thành Nam Office Location"
+                    src={developerConfig.mapEmbedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
               <div className="glass-card p-6 rounded-3xl border border-slate-200/80 dark:border-[#212B3B] space-y-3">
                 <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-                  Why Hire Nam?
+                  Why Hire Thành Nam?
                 </h4>
                 <div className="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Native Android & Mobile Monetization Expert (AdMob / IAP)</span>
+                  </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>Clean Architecture (Kotlin MVVM / React Modular)</span>
@@ -139,10 +177,6 @@ export const Contact: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>24-48 Hours Initial Specs Response Time</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>100% Source Code Ownership & Documentation</span>
                   </div>
                 </div>
               </div>

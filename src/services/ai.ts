@@ -11,72 +11,93 @@ export const getAIResponse = async (userQuery: string): Promise<AIResponse> => {
 
   const query = userQuery.toLowerCase().trim();
 
+  // Personal info & Identity queries
+  if (
+    query.includes('ai') ||
+    query.includes('tên') ||
+    query.includes('nam') ||
+    query.includes('phạm thành nam') ||
+    query.includes('sinh') ||
+    query.includes('2004') ||
+    query.includes('15/10') ||
+    query.includes('15102004') ||
+    query.includes('quê') ||
+    query.includes('ninh bình') ||
+    query.includes('utt') ||
+    query.includes('trường') ||
+    query.includes('học') ||
+    query.includes('cntt') ||
+    query.includes('công ty') ||
+    query.includes('kinh nghiệm')
+  ) {
+    return {
+      answer: `👋 **Thông tin cá nhân về Phạm Thành Nam:**\n\n- 👤 **Họ và tên:** Phạm Thành Nam\n- 🎂 **Ngày sinh:** 15/10/2004\n- 🏡 **Quê quán:** Ninh Bình\n- 🎓 **Học vấn:** Trường Đại học Công nghệ Giao thông Vận tải (UTT) — Chuyên ngành Công nghệ Thông tin (CNTT)\n- 💼 **Công việc hiện tại:** Developer tại công ty công nghệ (Gần 1 năm kinh nghiệm thực tế)\n- 🚀 **Thế mạnh chuyên môn:** Phát triển & maintain ứng dụng Native Android (Kotlin, MVVM, Room DB, Retrofit), tối ưu Monetization (Google AdMob, In-App Purchases / IAP), kết hợp với Firebase & Web Frontend (ReactJS, TypeScript).`,
+      suggestions: [
+        'Kỹ năng công nghệ của Thành Nam?',
+        'Các dự án Android & Web đã làm?',
+        'Cách liên hệ với Thành Nam?'
+      ]
+    };
+  }
+
   // Project queries
   if (query.includes('iptv') || query.includes('stream') || query.includes('video')) {
     return {
-      answer: `Nam developed **IPTV Player**, a native Android app built with Kotlin, MVVM architecture, Room DB, Retrofit, and ExoPlayer. It parses M3U/M3U8 playlists with low-latency HLS streaming, user favorites, and AI channel recommendations.`,
-      suggestions: ['Tell me about Kawaii ScreenPet', 'What web apps has Nam built?', 'How to contact Nam?']
+      answer: `Thành Nam đã phát triển **IPTV Player**, ứng dụng Android Native được xây dựng bằng Kotlin, MVVM architecture, Room DB, Retrofit và ExoPlayer. Ứng dụng phân tích cú pháp danh sách phát M3U/M3U8 phát trực tuyến HLS độ trễ thấp, danh mục yêu thích và đề xuất kênh.`,
+      suggestions: ['Xem dự án Kawaii ScreenPet', 'Thành Nam làm được web gì?', 'Cách liên hệ với Thành Nam?']
     };
   }
 
   if (query.includes('pet') || query.includes('kawaii') || query.includes('overlay') || query.includes('desktop')) {
     return {
-      answer: `Nam built **Kawaii ScreenPet**, a desktop-pet style Android app. It uses Android Foreground Services and WindowManager overlays to display interactive animated pets on top of other mobile applications without slowing down device performance.`,
-      suggestions: ['Show me IPTV Player details', 'What technologies does Nam know?', 'Can Nam build Android apps for me?']
+      answer: `Thành Nam đã phát triển **Kawaii ScreenPet**, ứng dụng Android dạng desktop-pet nổi trên màn hình. Sử dụng Android Foreground Service và WindowManager Overlay để hiển thị thú cưng hoạt hình tương tác mượt mà trên nền các ứng dụng khác.`,
+      suggestions: ['Chi tiết dự án IPTV Player', 'Thành Nam thông thạo công nghệ gì?', 'Liên hệ nhận dự án']
     };
   }
 
   if (query.includes('spa') || query.includes('booking') || query.includes('calendar')) {
     return {
-      answer: `Nam built **Spa Booking Platform**, a modern full-stack web reservation application using React, TypeScript, Tailwind CSS, Node.js, Express, and MongoDB. It features interactive calendar booking, customer portals, and admin management dashboards.`,
-      suggestions: ['What backend services does Nam build?', 'View Nam\'s projects', 'How much does web development cost?']
+      answer: `Thành Nam xây dựng **Spa Booking Platform**, ứng dụng web đặt lịch dịch vụ full-stack bằng React, TypeScript, Tailwind CSS, Node.js, Express và MongoDB. Tích hợp lịch đặt theo thời gian thực và trang quản trị admin.`,
+      suggestions: ['Dịch vụ backend của Thành Nam', 'Xem tất cả dự án', 'Báo giá phát triển web']
     };
   }
 
   // Skills & Tech Stack
-  if (query.includes('skill') || query.includes('tech') || query.includes('kotlin') || query.includes('react') || query.includes('stack')) {
+  if (query.includes('skill') || query.includes('kỹ năng') || query.includes('tech') || query.includes('kotlin') || query.includes('react') || query.includes('stack') || query.includes('admob')) {
     const mobileSkills = skillsData.filter(s => s.category === 'Mobile').map(s => s.name).join(', ');
     const webSkills = skillsData.filter(s => s.category === 'Web').map(s => s.name).join(', ');
     const backendSkills = skillsData.filter(s => s.category === 'Backend').map(s => s.name).join(', ');
 
     return {
-      answer: `Nam specializes in both Mobile and Web tech stacks:\n- **Mobile**: ${mobileSkills}\n- **Web**: ${webSkills}\n- **Backend**: ${backendSkills}\n- **Tools**: Git, GitHub, Android Studio, VS Code, Postman.`,
-      suggestions: ['Tell me about Nam\'s experience', 'What services can Nam build?', 'Let\'s start a project!']
+      answer: `Thành Nam chuyên sâu về cả Mobile và Web:\n- 📱 **Mobile & Monetization**: ${mobileSkills}\n- 💻 **Web Frontend**: ${webSkills}\n- ⚙️ **Backend & Database**: ${backendSkills}\n- 🛠️ **Công cụ**: Git, GitHub, Android Studio, VS Code, Postman.`,
+      suggestions: ['Kinh nghiệm làm Android AdMob/IAP', 'Dịch vụ Thành Nam cung cấp', 'Bắt đầu dự án mới!']
     };
   }
 
   // Services & Freelance
-  if (query.includes('build') || query.includes('service') || query.includes('hire') || query.includes('freelance') || query.includes('price')) {
+  if (query.includes('build') || query.includes('service') || query.includes('dịch vụ') || query.includes('thuê') || query.includes('freelance') || query.includes('giá')) {
     return {
-      answer: `Nam offers 3 main freelance services:\n1. **Android App Development**: Native Kotlin apps, ExoPlayer streaming, offline Room DB, Firebase, and overlay services.\n2. **Web Development**: Modern React + TypeScript websites, SaaS dashboards, booking portals, and responsive interfaces.\n3. **Backend Development**: Scalable Node.js + Express REST APIs, MongoDB schema design, and JWT auth.`,
-      suggestions: ['How to contact Nam?', 'View Featured Projects', 'What is Nam\'s availability?']
-    };
-  }
-
-  // Experience & Bio
-  if (query.includes('experience') || query.includes('who') || query.includes('about') || query.includes('nam')) {
-    return {
-      answer: `Hi! Thành Nam là **Android & Full-stack Web Developer** có kinh nghiệm phát triển và maintain các ứng dụng Android thực tế, đặc biệt là các dự án theo mô hình monetization như Google AdMob, quảng cáo trong ứng dụng và tích hợp In-App Purchases (IAP). Thành Nam cũng làm việc sâu với REST APIs, Firebase, Room local database và thiết kế giao diện Android mượt mà.`,
-      suggestions: ['What tech stack does Thành Nam use?', 'Show projects', 'Ask for a quote']
+      answer: `Thành Nam cung cấp 3 nhóm dịch vụ chính:\n1. 📱 **Android App Development & Monetization**: Lập trình app Native Kotlin, tối ưu quảng cáo AdMob, tích hợp thanh toán IAP, Firebase và Room DB.\n2. 💻 **Web Development & Dashboards**: Xây dựng website ReactJS + TypeScript, Tailwind CSS, trang quản trị SaaS hiện đại.\n3. ⚙️ **Backend API & Database**: Thiết kế RESTful API Node.js + Express, MongoDB schema và xác thực bảo mật JWT.`,
+      suggestions: ['Liên hệ với Thành Nam', 'Xem dự án tiêu biểu', 'Địa chỉ làm việc của Nam']
     };
   }
 
   // Contact
-  if (query.includes('contact') || query.includes('email') || query.includes('reach') || query.includes('hire')) {
+  if (query.includes('contact') || query.includes('liên hệ') || query.includes('email') || query.includes('sđt') || query.includes('địa chỉ')) {
     return {
-      answer: `You can reach out to Thành Nam directly through the **Contact page** on this website or email directly at **${developerConfig.email}**. Thành Nam is currently **${developerConfig.status}**!`,
-      suggestions: ['Go to Contact Page', 'What services does Thành Nam offer?', 'What projects has Thành Nam done?']
+      answer: `Bạn có thể liên hệ trực tiếp với Phạm Thành Nam qua **Trang Contact** trên website này hoặc gửi email về **${developerConfig.email}**.\n- 📍 **Địa chỉ:** ${developerConfig.address}\n- 💼 **Trạng thái:** ${developerConfig.status}!`,
+      suggestions: ['Đến trang Liên Hệ', 'Dịch vụ của Thành Nam', 'Xem các dự án đã làm']
     };
   }
 
   // Generic context response
   return {
-    answer: `Thành Nam là Android & Full-stack Web Developer chuyên về Kotlin native mobile apps, tối ưu hóa AdMob Monetization & IAP, Firebase, React web apps và Node.js REST APIs.`,
+    answer: `Phạm Thành Nam (Sinh 15/10/2004, Quê Ninh Bình, Sinh viên CNTT trường UTT) là Android & Full-stack Web Developer đang làm việc tại công ty công nghệ với gần 1 năm kinh nghiệm. Nam chuyên về Kotlin native mobile apps, tích hợp AdMob Monetization & IAP, Firebase, React web apps và Node.js REST APIs.`,
     suggestions: [
-      'What can Thành Nam build for me?',
-      'Tell me about Android & AdMob experience',
-      'What is Thành Nam\'s tech stack?',
-      'Is Thành Nam available for freelance?'
+      'Thành Nam là ai?',
+      'Kinh nghiệm làm Android & AdMob',
+      'Bộ công nghệ của Thành Nam',
+      'Liên hệ nhận dự án'
     ]
   };
 };

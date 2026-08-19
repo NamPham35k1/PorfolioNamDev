@@ -27,7 +27,13 @@ export const developerConfig = {
     'Mobile Monetization (Google AdMob Ads, Mediation, In-App Purchase / IAP)',
     'Backend & Cloud Integration (RESTful API, Firebase Auth / Firestore / FCM)',
     'Modern Web Development (ReactJS, TypeScript, Tailwind CSS, Vite)',
-  ]
+  ],
+  achievements: [
+    '🏆 Vô địch giải bóng đá Khoa Công nghệ Thông tin (CNTT)',
+    '🥈 Á quân (Nhì) giải bóng đá Trường Đại học Công nghệ Giao thông Vận tải (UTT)',
+  ],
+  hobbies: ['Đam mê bóng đá', 'Thể thao', 'Lập trình ứng dụng', 'Công nghệ'],
+  girlfriendName: 'Nguyễn Thị Kiều Trang',
 };
 
 export const quickStats: QuickStat[] = [

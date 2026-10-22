@@ -9,6 +9,10 @@ import { SkillCard } from '../components/skills/SkillCard';
 import { ServiceCard } from '../components/services/ServiceCard';
 import { BlogCard } from '../components/blog/BlogCard';
 import { GitHubActivity } from '../components/github/GitHubActivity';
+import { AndroidPhoneSimulator } from '../components/home/AndroidPhoneSimulator';
+import { MonetizationCalculator } from '../components/home/MonetizationCalculator';
+import { HackerTerminal } from '../components/home/HackerTerminal';
+import { HologramAchievements } from '../components/home/HologramAchievements';
 import { SEO } from '../components/common/SEO';
 import { projectsData } from '../data/projects';
 import { skillsData } from '../data/skills';
@@ -28,18 +32,27 @@ export const Home: React.FC = () => {
 
   return (
     <>
-      <SEO title="Nam — Android & Web Developer | Portfolio" />
+      <SEO title="Thành Nam — Android & Web Developer | Portfolio" />
 
       <main className="space-y-24 pb-20">
         <Hero />
 
         <QuickStats />
 
+        {/* Feature 1: Android Phone Simulator */}
+        <AndroidPhoneSimulator />
+
+        {/* Feature 6: 3D Hologram Achievements & Sports Awards */}
+        <HologramAchievements />
+
+        {/* Feature 2: Monetization Calculator */}
+        <MonetizationCalculator />
+
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Featured Showcase"
             title="Selected Projects"
-            subtitle="Explore production-ready native Android apps, media streaming players, and full-stack web platforms."
+            subtitle="Explore production-ready native Android apps, food delivery systems, IPTV streaming, and full-stack web platforms."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -113,6 +126,18 @@ export const Home: React.FC = () => {
           />
 
           <GitHubActivity />
+        </section>
+
+        {/* Feature 3: Hacker Terminal CLI */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            badge="Developer CLI"
+            title="Interactive Developer Terminal"
+            subtitle="Trải nghiệm CLI mini — gõ lệnh để khám phá kỹ năng, dự án và thông tin liên hệ của Thành Nam như một Developer thực thụ!"
+          />
+          <div className="mt-10">
+            <HackerTerminal />
+          </div>
         </section>
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

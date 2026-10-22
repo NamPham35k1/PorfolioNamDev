@@ -4,6 +4,7 @@ import { Navbar } from './components/navbar/Navbar';
 import { Footer } from './components/footer/Footer';
 import { ScrollToTop } from './components/common/ScrollToTop';
 import { AIAssistant } from './components/ai/AIAssistant';
+import { LofiPlayer } from './components/common/LofiPlayer';
 
 import { Home } from './pages/Home';
 import { About } from './pages/About';
@@ -37,6 +38,8 @@ export const App: React.FC = () => {
 
         <Footer />
         <AIAssistant />
+        {/* Feature 5: Lo-Fi Music Player floating widget */}
+        <LofiPlayer />
       </div>
     </Router>
   );

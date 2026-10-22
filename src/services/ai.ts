@@ -11,7 +11,7 @@ export const getAIResponse = async (userQuery: string): Promise<AIResponse> => {
 
   const query = userQuery.toLowerCase().trim();
 
-  // Football, Hobbies & Girlfriend / Personal life queries
+  // Football, Hobbies & Personal life queries
   if (
     query.includes('bóng đá') ||
     query.includes('đá bóng') ||
@@ -19,16 +19,12 @@ export const getAIResponse = async (userQuery: string): Promise<AIResponse> => {
     query.includes('giải') ||
     query.includes('vô địch') ||
     query.includes('nhì') ||
-    query.includes('bạn gái') ||
-    query.includes('người yêu') ||
-    query.includes('trang') ||
-    query.includes('kiều trang') ||
     query.includes('sở thích') ||
     query.includes('ngoài giờ') ||
     query.includes('hà nội')
   ) {
     return {
-      answer: `⚽ **Thông tin ngoại khóa & Cuộc sống của Phạm Thành Nam:**\n\n- 🏆 **Bóng đá & Thể thao:** Nam có niềm đam mê đặc biệt với bóng đá! Đã từng cùng đồng đội xuất sắc đoạt **Vô địch giải bóng đá Khoa Công nghệ Thông tin (CNTT)** 1 lần và đạt danh hiệu **Nhì (Á quân) giải bóng đá toàn trường UTT**.\n- 📍 **Nơi ở & Làm việc:** Đang sinh sống, học tập và làm việc tại Hà Nội.\n- ❤️ **Tình cảm:** Nam đã có bạn gái tên là **Nguyễn Thị Kiều Trang** (đang sinh sống, học tập và làm việc tại Hà Nội).`,
+      answer: `⚽ **Thông tin ngoại khóa & Cuộc sống của Phạm Thành Nam:**\n\n- 🏆 **Bóng đá & Thể thao:** Nam có niềm đam mê đặc biệt với bóng đá! Đã từng cùng đồng đội xuất sắc đoạt **Vô địch giải bóng đá Khoa Công nghệ Thông tin (CNTT)** 1 lần và đạt danh hiệu **Nhì (Á quân) giải bóng đá toàn trường UTT**.\n- 📍 **Nơi ở & Làm việc:** Đang sinh sống, học tập và làm việc tại Hà Nội.`,
       suggestions: [
         'Kinh nghiệm lập trình Android của Nam?',
         'Kỹ năng công nghệ chính?',
@@ -57,7 +53,7 @@ export const getAIResponse = async (userQuery: string): Promise<AIResponse> => {
     query.includes('kinh nghiệm')
   ) {
     return {
-      answer: `👋 **Thông tin cá nhân về Phạm Thành Nam:**\n\n- 👤 **Họ và tên:** Phạm Thành Nam\n- 🎂 **Ngày sinh:** 15/10/2004\n- 🏡 **Quê quán:** Ninh Bình\n- 🎓 **Học vấn:** Trường Đại học Công nghệ Giao thông Vận tải (UTT) — Chuyên ngành Công nghệ Thông tin (CNTT)\n- 💼 **Công việc hiện tại:** Developer tại công ty công nghệ (Gần 1 năm kinh nghiệm thực tế)\n- 🏆 **Thành tích nổi bật:** Vô địch giải bóng đá Khoa CNTT & Nhì giải bóng đá toàn trường UTT!\n- ❤️ **Tình cảm:** Có bạn gái tên Nguyễn Thị Kiều Trang, hiện cả hai đang học tập & làm việc tại Hà Nội.\n- 🚀 **Thế mạnh chuyên môn:** Phát triển & maintain ứng dụng Native Android (Kotlin, MVVM, Room DB, Retrofit), tối ưu Monetization (Google AdMob, In-App Purchases / IAP), kết hợp với Firebase & Web Frontend (ReactJS, TypeScript).`,
+      answer: `👋 **Thông tin cá nhân về Phạm Thành Nam:**\n\n- 👤 **Họ và tên:** Phạm Thành Nam\n- 🎂 **Ngày sinh:** 15/10/2004\n- 🏡 **Quê quán:** Ninh Bình\n- 🎓 **Học vấn:** Trường Đại học Công nghệ Giao thông Vận tải (UTT) — Chuyên ngành Công nghệ Thông tin (CNTT)\n- 💼 **Công việc hiện tại:** Developer tại công ty công nghệ (Gần 1 năm kinh nghiệm thực tế)\n- 🏆 **Thành tích nổi bật:** Vô địch giải bóng đá Khoa CNTT & Nhì giải bóng đá toàn trường UTT!\n- 🚀 **Thế mạnh chuyên môn:** Phát triển & maintain ứng dụng Native Android (Kotlin, MVVM, Room DB, Retrofit), tối ưu Monetization (Google AdMob, In-App Purchases / IAP), kết hợp với Firebase & Web Frontend (ReactJS, TypeScript).`,
       suggestions: [
         'Sở thích bóng đá & giải thưởng của Nam?',
         'Kỹ năng công nghệ của Thành Nam?',
